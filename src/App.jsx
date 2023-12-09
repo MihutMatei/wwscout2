@@ -1,35 +1,54 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import axios from 'axios';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const placeholderData = [
+  { id: 1, title: 'Placeholder Title 1', description: 'Placeholder Description 1' },
+  { id: 2, title: 'Placeholder Title 2', description: 'Placeholder Description 2' },
+  { id: 3, title: 'Placeholder Title 3', description: 'Placeholder Description 3' },
+  // Add more placeholder items as needed
+];
+
+function ListingsPage() {
+  // Simulating fetching data from the API (replace with Axios or actual fetch logic)
+  // For now, using placeholder data
+  const data = placeholderData;
+
+  // Divide data into chunks of 3 for each row
+  const chunkedData = data.reduce((resultArray, item, index) => {
+    const chunkIndex = Math.floor(index / 3);
+    if (!resultArray[chunkIndex]) {
+      resultArray[chunkIndex] = []; // Start a new row
+    }
+    resultArray[chunkIndex].push(item);
+    return resultArray;
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="listings-page">
+      {chunkedData.map((row, rowIndex) => (
+        <div className="row" key={rowIndex}>
+          {row.map((item, columnIndex) => (
+            <div className="card" key={columnIndex}>
+              {/* Customize the card layout based on your data */}
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+              {/* Add more fields as needed */}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <div className="App">
+      <h1>My Listings</h1>
+      <ListingsPage />
+    </div>
+  );
+}
+
+export default App;
