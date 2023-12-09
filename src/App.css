@@ -5,36 +5,70 @@
   text-align: center;
 }
 
+.listings-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust alignment */
+  gap: 40px 20px; /* Increase the vertical gap between rows to 40px */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 .card {
-  height: 6em;
+  
+  flex: 0 0 calc(30% 20px);
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  background-color: #b12d0cee;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .card:hover {
   filter: drop-shadow(0 0 2em #c45c07aa);
+  transform: translateY(-5px);
 }
 
-
-@keyframes card-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px; /* Adjust margin to position it further up */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .card {
-    animation: card-spin infinite 20s linear;
-  }
+.header-text {
+  margin: 0;
+  font-size: 32px;
+  text-transform: uppercase;
+  /* Additional styles as needed */
 }
 
-.card {
-  padding: 2em;
+.search-bar {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 300px; /* Adjust width as needed */
+  outline: none;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
