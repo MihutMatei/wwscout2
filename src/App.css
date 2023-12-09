@@ -9,7 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Adjust alignment */
-  gap: 40px 20px; /* Increase the vertical gap between rows to 40px */
+  gap: 120px 40px; /* Increase the vertical gap between rows to 40px */
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -17,19 +17,21 @@
 }
 
 .card {
-  
-  flex: 0 0 calc(30% 20px);
-  padding: 1.5em;
+  flex: 0 0 calc(30%-20px);
+  padding: 1.7em;
   will-change: filter;
   transition: filter 300ms;
-  background-color: #b12d0cee;
+  background-color: #F7941D;
   border-radius: 15px;
   margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  margin: left 10px;
+  text-align: center;
 }
 
 .card:hover {
-  filter: drop-shadow(0 0 2em #c45c07aa);
+  filter: drop-shadow(0 0 2em #EE4135);
   transform: translateY(-5px);
 }
 
@@ -48,9 +50,10 @@
 
 .search-bar {
   padding: 10px;
-  border-radius: 8px;
-  background-color: #f2f2f2;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #EC018B;
+  margin-top: 40px;
+  display: inline-block;
 }
 
 .search-bar input {
@@ -69,6 +72,6 @@
 
 .row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center cards within a row */
   margin-bottom: 20px;
 }
