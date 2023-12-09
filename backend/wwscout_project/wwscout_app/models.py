@@ -1,3 +1,12 @@
+# myapp/models.py
+
 from django.db import models
 
-# Create your models here.
+class JobApplication(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    position = models.CharField(max_length=100)
+    resume = models.FileField(upload_to='resumes/')
+
+    def __str__(self):
+        return self.name
