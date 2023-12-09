@@ -1,9 +1,8 @@
-# wwscout_app/urls.py
-
 from django.urls import path
-from .views import HomeView, GetJobApplicationsView
+from .views import GetJobApplicationsView, HomeView
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),  # Add this line for the root path
+    # ... existing URL patterns ...
     path('api/get_job_applications/', GetJobApplicationsView.as_view(), name='get_job_applications'),
+    path('', HomeView.as_view(), name='home'),
 ]

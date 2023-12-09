@@ -1,4 +1,4 @@
-# myapp/models.py
+# wwscout_app/models.py
 
 from django.db import models
 
@@ -10,3 +10,6 @@ class JobApplication(models.Model):
 
     def __str__(self):
         return self.name
+
+class Meta:
+    app_label = 'wwscout_app'
