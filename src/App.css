@@ -80,3 +80,13 @@
   outline: none;
 }
 
+/* Navigation Menu */
+
+.container-box{
+  display: flex;
+  width: 100%;
+}
+
+.button-menu{
+  background-color: var(--primaryColor);
+}
