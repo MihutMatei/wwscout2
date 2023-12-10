@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import {ListingsPage} from "./goodfront.jsx"
+import {Register} from "./Register.jsx"
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/frontend",
     element: <ListingsPage />
+  }
+  {
+    path: "/register"
+    element: <Register />
   }
 ]);
 

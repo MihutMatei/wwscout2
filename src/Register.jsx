@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import Logo from './assets/Logo.png';  // Correct the typo in the import path
 import './Register.css'
 
-function App() {
+function Register() {
   return (
     <>
     <div className='background'>
@@ -232,7 +232,7 @@ function App() {
             <option value="yemen">Yemen</option>
             <option value="zambia">Zambia</option>
             <option value="zimbabwe">Zimbabwe</option>
-          </select>     
+          </select>
         </div>
         
         <div className='form-group'>
