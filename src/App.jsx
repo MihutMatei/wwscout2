@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <>
-    <div>
+    <div className='background'>
     <div className='spaced'>
       <img className="photo" src={backgroundImage} alt="Placeholder" />
     </div>
@@ -241,7 +241,7 @@ function App() {
         </div>
         </div>
 
-        <div className='spaced'>
+        <div className='spaced '>
           <button type="submit">Create Account</button>
         </div>
       </form>

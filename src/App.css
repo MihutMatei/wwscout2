@@ -52,13 +52,18 @@
 }
 
 :root {
+  --gradient-color1: #EC018B;
+  --gradient-color2: #EE4135;
+  --gradient-color3: #F7941D;
+  --gradient-color4: #FBB040;
 
-  --input-color: #99A3BA;
-  --input-border: #CDD9ED;
-  --input-background: #fff;
-  --input-placeholder: #CBD1DC;
+  --back-color: #F7941D;
+  --input-color: #000000;
+  --input-border: #00000050;
+  --input-background: #ffffffee;
+  --input-placeholder: #000000;
 
-  --input-border-focus: #275EFE;
+  --input-border-focus: #EC018B;
 
   --group-color: var(--input-color);
   --group-border: var(--input-border);
@@ -66,7 +71,7 @@
 
   --group-color-focus: #fff;
   --group-border-focus: var(--input-border-focus);
-  --group-background-focus: #678EFE;
+  --group-background-focus: #EC018B;
 
 }
 
@@ -162,7 +167,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #F5F9FF;  
+  /* background: var(--back-color);   */
   .form-group {
       max-width: 360px;
       &:not(:last-child) {
@@ -180,4 +185,38 @@ body {
 
 .country::placeholder{
   color: var(--input-color);
+}
+
+.background{
+  background-color: var(--group-background);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+#picture{
+  background-color: var(--input-background);
+}
+
+body {
+	background: linear-gradient(-45deg,
+    #EC018B,
+    #EE4135,
+    #F7941D,
+    #FBB040
+  );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
