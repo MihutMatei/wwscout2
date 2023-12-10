@@ -2,7 +2,7 @@ import { useState }  from "react";
 import React from 'react';
 import Information from './assets/data.js'; // Import your data
 import { App } from "antd";
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 // import Home from './components/Home'
 // import About from './components/About'
 // import Contact from './components/Contact'
@@ -12,7 +12,17 @@ import { Route, Routes } from 'react-router-dom'
 //import './App.scss'
 
 export function ShowInfo() {
-const ShowInfo = () => {
+  const navigate = useNavigate();
+  
+  const handleNabigationToPage = () => {
+    navigate("/peers")
+  }
+
+  const handleNabigationToPage2 = () => {
+    navigate("/main")
+  }
+
+  const ShowInfo = () => {
   return (
     <div className="container">
       <h1>{Information.title}</h1>
