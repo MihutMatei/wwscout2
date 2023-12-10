@@ -43,3 +43,53 @@
 #root {
     height: 100% !important;
 }
+
+.font-arial{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.search-bar-input{
+    font-size: 21px !important;
+    font-weight: normal;
+}
+
+.text-orange{
+    color: var(--gradient-color2);
+}
+
+.text-white{
+    color: #eee !important;
+}
+
+.text-pink{
+    color: var(--gradient-color1) !important;
+}
+
+.search-bar{
+    background-color: #eeeeeeff !important;
+}
+
+.font-18{
+    font-size: 18.5px !important;
+}
+
+.font-21{
+    font-size:21.5px !important;
+    display: flex !important;
+    align-items: start !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.font-28{
+    font-size: 28.5px !important;
+    font-weight: bold !important;
+} 
+
+.card {
+    background-color: #eeeeeeff !important;
+}
+
+.ant-card-body{
+    background-color: #eeeeeeff !important;
+}
