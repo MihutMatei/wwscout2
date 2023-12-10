@@ -71,6 +71,10 @@ export const ListingsPage = () => {
               />
             </div>
           </div>
+          <div className="cotainer-box">
+            <button className='button-menu' onClick={handleNabigationToPage}>Peers</button>
+            <button className='button-menu' onClick={handleNabigationToPage2}>Helpful Info</button>
+          </div>
           <div className="listings-page">
             <div className="cards-container">
               {chunkedData.map((row, rowIndex) => (
