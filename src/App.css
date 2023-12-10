@@ -42,7 +42,7 @@
 }
 
 .photo{
-  width: 100px;
+  width: 300px;
   height: auto;
   border-radius: 50%;
 }
@@ -178,6 +178,7 @@ body {
 
 .country{
   border-radius: 0px 7px 7px 0px;
+  border-left: 0px;
   border-color: var(--input-border);
   background-color: var(--input-background);
   width: 100%;
@@ -219,4 +220,8 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+span{
+  width: 78px;
 }

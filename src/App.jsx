@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import backgroundImage from './assets/placeholder-photo.png';  // Correct the typo in the import path
+import Logo from './assets/Logo.png';  // Correct the typo in the import path
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
     <div className='background'>
     <div className='spaced'>
-      <img className="photo" src={backgroundImage} alt="Placeholder" />
+      <img className="photo" src={Logo} alt="Placeholder" />
     </div>
       <form action="/update-profile" method="post" enctype="multipart/form-data">
         <div className='spaced'>
@@ -236,7 +236,7 @@ function App() {
         </div>
         
         <div className='form-group'>
-          <span>Picture</span>
+          <span>CV</span>
           <input class="form-field" id="picture" type="file" placeholder="Cluj-Napoca" required></input>
         </div>
         </div>
