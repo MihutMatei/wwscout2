@@ -60,12 +60,12 @@ export function ListingsPage() {
               <Flex vertical gap={20}  align='center' justify='center'>
                 {row.map((item, columnIndex) => (
                   <Card className="card text-white" title={(<h2 className='font-28 text-white font-arial'>{item.name}</h2>)} headStyle={{background: '#EE4135'}} bodyStyle={{background: '#F7941D'}} bordered={false} style={{width: '60%'}}>
-                    <p className='text-orange font-21'>pozitia cautata: {item.open_position}</p>
-                    <p className='text-orange font-21'>numarul de pozitii deschise:{item.num_open_positions}</p>
-                    <p className='text-orange font-21'>numarul de ore de munca pe saptamana:{item.hours_per_week}</p>
-                    <p className='text-orange font-21'>numarul de zile libere pe an:{item.days_off_per_year}</p>
-                    <p className='text-orange font-21' style={{fontWeight:'bold'}}>Salariu: {item.salary_per_month} lei</p>
-                    <p className='text-orange font-21'>{item.facilities}</p>
+                    <p className='text-orange font-21 align-left'>pozitia cautata: {item.open_position}</p>
+                    <p className='text-orange font-21 align-left'>numarul de pozitii deschise:{item.num_open_positions}</p>
+                    <p className='text-orange font-21 align-left'>numarul de ore de munca pe saptamana:{item.hours_per_week}</p>
+                    <p className='text-orange font-21 align-left'>numarul de zile libere pe an:{item.days_off_per_year}</p>
+                    <p className='text-orange font-21 align-left' style={{fontWeight:'bold'}}>Salariu: {item.salary_per_month} lei</p>
+                    <p className='text-orange font-21 align-left'>{item.facilities}</p>
                   </Card>
                 ))}
               </Flex>

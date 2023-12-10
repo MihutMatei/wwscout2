@@ -112,11 +112,15 @@ body{
 /* Fonts and colors */
 
 .font-21{
-  font-size:21.5px !important;
+  font-size: 21.5px !important;
   display: flex !important;
   align-items: start !important;
   /* font-family: 'Open Sans', sans-serif !important; */
   font-weight: bold;
+}
+
+.align-left{
+  text-align: start !important;
 }
 
 .text-orange{
