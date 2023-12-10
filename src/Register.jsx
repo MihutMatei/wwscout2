@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Logo from './assets/Logo.png';  // Correct the typo in the import path
-import './App.css'
+import './Register.css'
 
 function App() {
   return (
