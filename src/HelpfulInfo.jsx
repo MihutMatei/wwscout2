@@ -5,6 +5,10 @@ const ShowInfo = () => {
   return (
     <div className="container width-100">
       <h2 className='font-28'>{Information.title}</h2>
+      <div className='container-box'>
+        <button className="button-menu" >Job Listing</button>
+        <button className="button-menu" >Peers</button>
+      </div>
       <div className="spacer"></div>
       <h3 className='font-20'> Cerere motivată. </h3>
       <h3 className='font-20'> Dovada împuternicirii legale a angajatorului. </h3>
@@ -29,20 +33,3 @@ const ShowInfo = () => {
 };
 
 export default ShowInfo;
-
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// Copia procesului-verbal întocmit în urma selecției realizate pentru ocuparea postului vacant din care trebuie să rezulte că străinul în cauză îndeplinește condițiile de pregătire profesională și experiența în activitate, prevăzute de legislația în materie pentru ocuparea locului de muncă;
-// CV cetatean strain – acest document trebuie să conțină și declarația străinului că este apt din punct de vedere medical pentru a putea fi încadrat în muncă și are cunoștințe minime de limba română sau o limbă de circulație internațională.
-// Două fotografii ale străinului de tip 3X4.
-// Scrisori de recomandare de la foștii angajatori – dacă este cazul.
-// Cazier judiciar al străinului (din tara de domiciliu sau de resedinta);
-// Cazier judiciar al angajatorului.
-// Copia pașaportului cetățeanului străin 
