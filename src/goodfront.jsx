@@ -39,7 +39,7 @@ export function ListingsPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-      </div>
+      </div> 
       <div className='container-box'>
         <button className="button-menu">Peer</button>
         <button className="button-menu">Helpful Info</button>
