@@ -1,15 +1,22 @@
 import { useState }  from "react";
 import logo from "./assets/logosmol.svg";
-
+import { useNavigate } from 'react-router-dom';
 
 export function Login() {
   const [email,setEmail] = useState("")
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     // run login API
   alert(email + password);
   };
+  const handleNabigationToPage = () => {
+    navigate("/main")
+}
+  const handleNabigationToPage2 = () => {
+    navigate("/register")
+}
   return (
      <>
       <div className="container">
@@ -27,9 +34,9 @@ export function Login() {
             type="password" />
           </div>
           <div className="bottomFrom">
-            <button type="submit">LogIn</button>
+            <button onClick={handleNabigationToPage}>LogIn</button>
             <div className="links">
-              <p>New User?</p>
+            <button onClick={handleNabigationToPage2}>New User?</button>
               <p>Forgot Password?</p>
             </div>
           </div>

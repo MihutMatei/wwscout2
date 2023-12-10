@@ -1,26 +1,45 @@
-.text-box{
-    color: black;
-    background-color: white;
-    border-radius: 10px;
+:root {
+    --gradient-color1: #EC018B;
+    --gradient-color2: #EE4135;
+    --gradient-color3: #F7941D;
+    --gradient-color4: #FBB040;
+  
+    --back-color: #F7941D;
+    --input-color: #000000;
+    --input-border: #00000050;
+    --input-background: #ffffffee;
+    --input-placeholder: #000000;
+  
+    --input-border-focus: #EC018B;
+  
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+  
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #EC018B;
+  
+  }
+
+.text-search {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    color: var(--input-border) !important;
+    line-height: 1.625 !important;
+
+    background-color: #fff !important;
+    background-image: url(//addsearch.com/logo/AAAAAA-20.png ) !important;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+
+    border: 1px solid #eee !important;
+    border-radius: 4px !important;
     width: 100% !important;
-    height: 100% !important;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0px;
+    padding: 15px !important;
+    cursor: auto !important;
 }
 
-.height-100{
-    height: 100% !important;
-    min-height: 400px !important;
-    display: block;
-}
-
-body{
-    height: 100% !important;
-    display: block;
-}
-
-#root{
+#root {
     height: 100% !important;
 }

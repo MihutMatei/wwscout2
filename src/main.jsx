@@ -12,15 +12,16 @@ import {Register} from "./Register.jsx"
 import {Login} from "./LogIn.jsx"
 import {PeerContacting} from "./Peers.jsx"
 import './LogIN.css'
-import {ShowInfo} from './HelpfulInfo.jsx'
+import ShowInfo from './HelpfulInfo.jsx';
+import './HelpfulInfo.css'; // Import your CSS file
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Login/>,
   },
   {
-    path: "/frontend",
+    path: "/main",
     element: <ListingsPage />
   },
   {
@@ -28,11 +29,7 @@ const router = createBrowserRouter([
     element: <Register />
   },
   {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "Peers",
+    path: "/peers",
     element: <PeerContacting />
   },
   {
@@ -49,3 +46,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </RouterProvider>
   </React.StrictMode>,
 )
+

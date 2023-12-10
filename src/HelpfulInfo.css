@@ -1,1 +1,16 @@
-SI ASTA TREBUIE STERS
+/* styles.css */
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
