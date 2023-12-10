@@ -40,6 +40,10 @@ export function ListingsPage() {
           />
         </div>
       </div>
+      <div className='container-box'>
+        <button className="button-menu">Peer</button>
+        <button className="button-menu">Helpful Info</button>
+      </div>
       <div className="listings-page">
         <div className="cards-container">
           {chunkedData.map((row, rowIndex) => (

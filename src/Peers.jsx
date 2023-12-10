@@ -39,6 +39,10 @@ export function PeerContacting() {
           />
         </div>
       </div>
+      <div className='container-box'>
+        <button className="button-menu">Job Listing</button>
+        <button className="button-menu">Helpful Info</button>
+      </div>
       <div className="listings-page">
         <div className="cards-container text-white">
           {chunkedData.map((row, rowIndex) => (
