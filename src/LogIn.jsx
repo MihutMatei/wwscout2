@@ -19,7 +19,7 @@ export function Login() {
 }
   return (
      <>
-      <div className="container">
+      <div className="container width-box">
         <img src={logo} alt="WWSCouts Logo" />
         <h2>Manage Your Account</h2>
         <form onSubmit={(e)=>handleSubmit(e)}>

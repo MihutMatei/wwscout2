@@ -106,3 +106,6 @@ button:active {
   gap: 1rem;
 }
 
+.width-box{
+  min-width: 1000px !important;
+}
