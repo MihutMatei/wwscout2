@@ -5,11 +5,13 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+  BrowserRouter
 } from "react-router-dom";
 import {ListingsPage} from "./goodfront.jsx"
 import {Register} from "./Register.jsx"
 import {Login} from "./LogIn.jsx"
 import {PeerContacting} from "./Peers.jsx"
+import './LogIN.css'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}>
+      <Login/>  
+    </RouterProvider>
   </React.StrictMode>,
 )
