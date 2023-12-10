@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import Logo from './assets/Logo.png';  // Correct the typo in the import path
 import './Register.css'
 
-function Register() {
+export function Register() {
   return (
     <>
     <div className='background'>
