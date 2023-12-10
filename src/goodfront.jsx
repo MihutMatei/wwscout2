@@ -38,11 +38,12 @@ export function ListingsPage() {
   return (
     <div className="App">
       <div className="header">
-        <h1 className="header-text">Job Listings</h1>
+        <h1 className="header-text ">Job Listings</h1>
         <div className="search-bar">
           <input
+          className='search-bar-input'
             type="text"
-            placeholder="cauta..."
+            placeholder="Cauta..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -58,13 +59,13 @@ export function ListingsPage() {
             <Flex align='center' justify='center'>
               <Flex vertical gap={20}  align='center' justify='center'>
                 {row.map((item, columnIndex) => (
-                  <Card className="card" title={(<h2>{item.name}</h2>)} headStyle={{background: '#EE4135'}} bodyStyle={{background: '#F7941D'}} bordered={false} style={{width: '60%'}}>
-                    <p>pozitia cautata: {item.open_position}</p>
-                    <p>numarul de pozitii deschise:{item.num_open_positions}</p>
-                    <p>numarul de ore de munca pe saptamana:{item.hours_per_week}</p>
-                    <p>numarul de zile libere pe an:{item.days_off_per_year}</p>
-                    <p style={{fontWeight:'bold'}}>Salariu: {item.salary_per_month} lei</p>
-                    <p>{item.facilities}</p>
+                  <Card className="card text-white" title={(<h2 className='font-28 text-white font-arial'>{item.name}</h2>)} headStyle={{background: '#EE4135'}} bodyStyle={{background: '#F7941D'}} bordered={false} style={{width: '60%'}}>
+                    <p className='text-orange font-21'>pozitia cautata: {item.open_position}</p>
+                    <p className='text-orange font-21'>numarul de pozitii deschise:{item.num_open_positions}</p>
+                    <p className='text-orange font-21'>numarul de ore de munca pe saptamana:{item.hours_per_week}</p>
+                    <p className='text-orange font-21'>numarul de zile libere pe an:{item.days_off_per_year}</p>
+                    <p className='text-orange font-21' style={{fontWeight:'bold'}}>Salariu: {item.salary_per_month} lei</p>
+                    <p className='text-orange font-21'>{item.facilities}</p>
                   </Card>
                 ))}
               </Flex>

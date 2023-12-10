@@ -39,12 +39,12 @@ export function PeerContacting() {
   return (
     <div className="App">
       <div className="header">
-        <h1 className="header-text text-white font-arial">Peer Talking</h1>
+        <h1 className="header-text text-yes">Peer Talking</h1>
         <div className="search-bar">
           <input
-            className='search-bar-input font-arial'
+            className='search-bar-input'
             type="text"
-            placeholder="Searching for peer..."
+            placeholder="Cauta..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
