@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Flex } from 'antd';
+import './Peers.css'
 
 export function PeerContacting() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,18 +26,25 @@ export function PeerContacting() {
   }
 
   return (
-    <div>
+    <div className='height-100'>
       {/* Render your data here */}
       {chunkedData.map((row, rowIndex) => (
         <Flex key={rowIndex}>
           {row.map((item, columnIndex) => (
-            <Card key={columnIndex} style={{ width: 300, margin: '10px' }}>
+            <Card key={columnIndex}>
               <h2>{item.name}</h2>
               {/* Add other fields as needed */}
             </Card>
           ))}
         </Flex>
       ))}
+      <div className='height-100'>
+      <form className='height-100'>
+          <div className="height-100">
+            <input className='text-box height-100' type="text"/>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
