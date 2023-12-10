@@ -9,6 +9,7 @@ import {
 import {ListingsPage} from "./goodfront.jsx"
 import {Register} from "./Register.jsx"
 import {Login} from "./LogIn.jsx"
+import {PeerContacting} from "./Peers.jsx"
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "Peers",
+    element: <PeerContacting />
   }
 ]);
 
