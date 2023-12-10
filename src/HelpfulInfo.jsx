@@ -1,13 +1,21 @@
 import React from 'react';
 import Information from './assets/data.js';
+import { useNavigate } from 'react-router-dom';
 
 const ShowInfo = () => {
+  const navigate = useNavigate();
+  const handleNabigationToPage = () => {
+    navigate("/main")
+}
+  const handleNabigationToPage2 = () => {
+    navigate("/peers")
+}
   return (
     <div className="container width-100">
       <h2 className='font-28'>{Information.title}</h2>
       <div className='container-box'>
-        <button className="button-menu" >Job Listing</button>
-        <button className="button-menu" >Peers</button>
+        <button className="button-menu" onClick={handleNabigationToPage} >Job Listing</button>
+        <button className="button-menu" onClick={handleNabigationToPage2}>Peers</button>
       </div>
       <div className="spacer"></div>
       <h3 className='font-20'> Cerere motivată. </h3>
