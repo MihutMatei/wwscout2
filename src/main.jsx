@@ -12,6 +12,7 @@ import {Register} from "./Register.jsx"
 import {Login} from "./LogIn.jsx"
 import {PeerContacting} from "./Peers.jsx"
 import './LogIN.css'
+import {ShowInfo} from './HelpfulInfo.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "Peers",
     element: <PeerContacting />
+  },
+  {
+    path: "HelpfulInfo",
+    element: <ShowInfo />
   }
 ]);
 
@@ -40,7 +45,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}>
-      <Login/>  
+      <Login/>
     </RouterProvider>
   </React.StrictMode>,
 )
