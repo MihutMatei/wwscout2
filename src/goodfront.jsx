@@ -2,11 +2,19 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import {Card, Flex} from 'antd';
-
+import { useNavigate } from 'react-router-dom';
 
 export function ListingsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [jobData, setJobData] = useState([]); // State to store fetched data
+  const navigate = useNavigate();
+
+  const handleNabigationToPage = () => {
+    navigate("/peers")
+  }
+  const handleNabigationToPage2 = () => {
+    navigate("/HelpfulInfo")
+  }
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/get_job_applications/')  // Replace with your Django server URL
@@ -41,8 +49,8 @@ export function ListingsPage() {
         </div>
       </div> 
       <div className='container-box'>
-        <button className="button-menu">Peer</button>
-        <button className="button-menu">Helpful Info</button>
+        <button className="button-menu" onClick={handleNabigationToPage}>Peer</button>
+        <button className="button-menu" onClick={handleNabigationToPage2}>Helpful Info</button>
       </div>
       <div className="listings-page">
         <div className="cards-container">
@@ -60,7 +68,7 @@ export function ListingsPage() {
                   </Card>
                 ))}
               </Flex>
-            </Flex> 
+            </Flex>
           ))}
         </div>
       </div>

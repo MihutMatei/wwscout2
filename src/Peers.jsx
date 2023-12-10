@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Peers.css'
 import {Card, Flex} from 'antd';
-import { useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export function PeerContacting() {
-  const navigate = useNavigation();
-
   const [searchTerm, setSearchTerm] = useState('');
   const [peerData, setPeerData] = useState([]);
+
+  const navigate = useNavigate();
 
   const handleNabigationToPage = () => {
     navigate("/main")
