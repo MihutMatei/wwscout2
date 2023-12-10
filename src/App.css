@@ -3,9 +3,15 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --primaryColor: #f1a342;
+  --accentColor: #ffffff;
+  --darkColor: #eb6359;
 }
 
+
+
 .listings-page {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Adjust alignment */
@@ -17,8 +23,8 @@
 }
 
 .card {
+  min-width: 30rem;
   flex: 0 0 calc(30%-20px);
-  padding: 1.7em;
   will-change: filter;
   transition: filter 300ms;
   background-color: #F7941D;
@@ -28,11 +34,21 @@
   margin-right: 10px;
   margin: left 10px;
   text-align: center;
+  max-width: 70%;
+  justify-content: center
+  
+  
 }
 
 .card:hover {
   filter: drop-shadow(0 0 2em #EE4135);
   transform: translateY(-5px);
+}
+
+.card-title {
+  background-color: #EC018B;
+  flex-direction: column;
+  max-width: 100%;
 }
 
 .header {
@@ -64,14 +80,3 @@
   outline: none;
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.row {
-  display: flex;
-  justify-content: center; /* Center cards within a row */
-  margin-bottom: 20px;
-}

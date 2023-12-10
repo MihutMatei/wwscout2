@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import {Card, Flex} from 'antd';
+
 
 export function ListingsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,7 +34,7 @@ export function ListingsPage() {
         <div className="search-bar">
           <input
             type="text"
-            placeholder="Search by title..."
+            placeholder="cauta..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -41,14 +43,20 @@ export function ListingsPage() {
       <div className="listings-page">
         <div className="cards-container">
           {chunkedData.map((row, rowIndex) => (
-            <div className="row" key={rowIndex}>
-              {row.map((item, columnIndex) => (
-                <div className="card" key={columnIndex}>
-                  <h2>{item.name}</h2>
-                  <p>{item.description}</p>
-                </div>
-              ))}
-            </div>
+            <Flex align='center' justify='center'>
+              <Flex vertical gap={20}  align='center' justify='center'>
+                {row.map((item, columnIndex) => (
+                  <Card className="card" title={(<h2>{item.name}</h2>)} headStyle={{background: '#EE4135'}} bodyStyle={{background: '#F7941D'}} bordered={false} style={{width: '60%'}}>
+                    <p>pozitia cautata: {item.open_position}</p>
+                    <p>numarul de pozitii deschise:{item.num_open_positions}</p>
+                    <p>numarul de ore de munca pe saptamana:{item.hours_per_week}</p>
+                    <p>numarul de zile libere pe an:{item.days_off_per_year}</p>
+                    <p style={{fontWeight:'bold'}}>Salariu: {item.salary_per_month} lei</p>
+                    <p>{item.facilities}</p>
+                  </Card>
+                ))}
+              </Flex>
+            </Flex>
           ))}
         </div>
       </div>

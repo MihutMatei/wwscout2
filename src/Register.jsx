@@ -249,5 +249,3 @@ export function Register() {
     </>
   )
 }
-
-export default App
