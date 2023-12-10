@@ -1,1 +1,5 @@
-TREBUIE SA STERGI ACEST TEXT
+import { useState }  from "react";
+
+export function ShowInfo() {
+  
+}
