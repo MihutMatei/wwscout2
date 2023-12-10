@@ -60,7 +60,7 @@ export function ListingsPage() {
                   </Card>
                 ))}
               </Flex>
-            </Flex>
+            </Flex> 
           ))}
         </div>
       </div>
