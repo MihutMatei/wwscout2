@@ -88,5 +88,12 @@
 }
 
 .button-menu{
-  background-color: var(--primaryColor);
+  background-color: var(--darkColor);
+}
+
+/* Background !! IMPORTANT NU MODIFICA*/
+
+body{
+  width: auto;
+  height: 100% !important;
 }
