@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import {ListingsPage} from "./goodfront.jsx"
 import {Register} from "./Register.jsx"
+import {Login} from "./LogIn.jsx"
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/login",
+    element: <Login />
   }
 ]);
 

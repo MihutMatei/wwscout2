@@ -2,7 +2,7 @@ import { useState }  from "react";
 import logo from "./assets/logosmol.svg";
 
 
-function App() {
+export function Login() {
   const [email,setEmail] = useState("")
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ function App() {
           </div>
           <div className="inputcontainer">
             <p>Password</p>
-            <input value={password} onChange={e=>setPassword(e.target.value)} 
+            <input value={password} onChange={e=>setPassword(e.target.value)}
             type="password" />
           </div>
           <div className="bottomFrom">
@@ -38,5 +38,3 @@ function App() {
   </>
   );
 }
-
-export default App;
