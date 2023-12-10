@@ -3,8 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Logo from './assets/Logo.png';  // Correct the typo in the import path
 import './Register.css'
+import { useNavigate } from 'react-router-dom';
+
 
 export function Register() {
+  const navigate = useNavigate();
+  const handleNabigationToPage = () => {
+    navigate("/main")
+}
+
   return (
     <>
     <div className='background'>
@@ -242,7 +249,7 @@ export function Register() {
         </div>
 
         <div className='spaced '>
-          <button type="submit">Create Account</button>
+          <button onClick={handleNabigationToPage}>Create Account</button>
         </div>
       </form>
       </div>

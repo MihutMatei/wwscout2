@@ -12,3 +12,17 @@ class JobApplication(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Peer(models.Model):
+    name = models.CharField(max_length=100, default = "")
+    position = models.CharField(max_length=100, default = "")
+    description = models.TextField(default = "")
+    current_country = models.CharField(max_length=100, default = "")
+    natal_country = models.CharField(max_length=100, default = "")
+    current_workplace = models.CharField(max_length=100, default = "")
+    phone_number = models.IntegerField(default="0")
+    email = models.CharField(max_length=255, default="")
+    # Add other fields as needed for your Peer model
+
+    def __str__(self):
+        return self.name
