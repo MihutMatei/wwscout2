@@ -1,1 +1,1 @@
-Nu stiu ce e ala README
+Proiect al echipei DecebalTech pentru winter Polihack 2023
